@@ -12,7 +12,7 @@ function App() {
       {/* Contenido de tu página */}
       <div className="p-4">
         <h1 className="text-3xl font-bold underline">
-          Hello world
+          Hola mundo
         </h1>
         <p className="mt-4">Este es el contenido de mi página, debajo de la barra de navegación.</p>
       </div>
