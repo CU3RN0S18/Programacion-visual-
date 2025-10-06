@@ -1,23 +1,32 @@
 // src/App.jsx
 
-import './App.css';
-import Navbar from './components/Navbar'; // <-- 1. IMPORTA TU COMPONENTE
+import Navbar from "./components/Navbar";
+// 1. Importa los componentes de React Router
+import { Routes, Route } from 'react-router-dom';
+
+// 2. Importa todas tus páginas
+import Inicio from './pages/Inicio';
+import AcercaDe from './pages/AcercaDe';
+import Servicios from './pages/Servicios';
+import Curriculum from './pages/Curriculum'; // Asegúrate que la ruta sea correcta
 
 function App() {
   return (
-    <> {/* Usamos un fragmento <>...</> para devolver múltiples elementos */}
+    <div className="flex">
+      {/* La barra de navegación siempre estará visible */}
+      <Navbar />
 
-      <Navbar /> {/* <-- 2. AÑADE EL COMPONENTE AQUÍ */}
-
-      {/* Contenido de tu página */}
-      <div className="p-4">
-        <h1 className="text-3xl font-bold underline">
-          Hola mundo
-        </h1>
-        <p className="mt-4">Este es el contenido de mi página, debajo de la barra de navegación.</p>
-      </div>
-
-    </>
+      {/* El contenido principal cambiará según la ruta */}
+      <main className="flex-grow p-8">
+        {/* 3. Aquí definimos qué componente mostrar para cada ruta */}
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/acerca-de" element={<AcercaDe />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/curriculum" element={<Curriculum />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
