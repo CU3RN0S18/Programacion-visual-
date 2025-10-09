@@ -5,8 +5,8 @@ import ToggleSeccion from '../components/ToggleSeccion';
 
 function Inicio() {
     const juegos = [
-        { id: 1, titulo: "VALORANT", descripcion: "Un juego de estrategias con bandos...", className: "bg-red-500 border-red-900" },
-        { id: 2, titulo: "Rainbow six", descripcion: "Un juego de estrategias de agentes...", className: "bg-gray-300 border-gray-500" },
+        { id: 1, titulo: "VALORANT", descripcion: "Un juego de estrategias con bandos y desativacion", className: "bg-red-500 border-red-900" },
+        { id: 2, titulo: "Rainbow six", descripcion: "Un juego de estrategias de agentes", className: "bg-gray-300 border-gray-500" },
         { id: 3, titulo: "Ark survival", descripcion: "Juego de mundo abierto de sobrevivir...", className: "bg-green-500 border-green-800" },
         { id: 4, titulo: "Seven day today", descripcion: "Juego de mundo abierto de sobrevivir...", className: "bg-rose-300 border-rose-500" }
     ];
@@ -17,7 +17,7 @@ function Inicio() {
     return (
         <>
             <h1 className="text-4xl font-bold text-center mb-4">
-                Lista de Videojuegos
+                hola
             </h1>
 
             {/* 2. El input controlado. Su valor y su cambio están ligados al estado. */}

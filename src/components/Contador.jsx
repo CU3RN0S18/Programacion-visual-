@@ -26,7 +26,7 @@ function Contador() {
     return (
         <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center mt-8">
             <p className="text-2xl font-semibold mb-4">
-                Contador: <span className="text-blue-600 font-bold">{count}</span>
+                contador: <span className="text-blue-600 font-bold">{count}</span>
             </p>
 
             {/* Usamos un div con flexbox para alinear los botones */}
