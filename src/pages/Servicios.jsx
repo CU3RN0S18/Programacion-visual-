@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-// --- Datos de las Clases ---
-// Esto es como tu array de "juegos" de antes.
+
 const classesData = [
     {
         id: 'warrior',
@@ -25,10 +24,7 @@ const classesData = [
         color: 'bg-gray-800/60 border-gray-500',
     },
 ];
-
-// --- Componente Reutilizable para la Tarjeta de Clase ---
-// Este es el equivalente a tu componente <ToggleSeccion> o <CookieRecipe>.
-// Muestra la información de una clase y nos dice cuándo se hace clic en ella.
+// Esto es lo de los contenedores que hicimos la otra vez
 function ClassCard({ classInfo, onSelect }) {
     return (
         <div
@@ -44,10 +40,10 @@ function ClassCard({ classInfo, onSelect }) {
     );
 }
 
-// --- Componente para el Modal de Confirmación ---
-// Este es tu nuevo componente <Modal>. Recibe la clase seleccionada y una función para cerrarse.
+//  Componente para el Modal de Confirmación 
+
 function ClassDetailModal({ selectedClass, onClose }) {
-    if (!selectedClass) return null; // No mostrar nada si no hay clase seleccionada
+    if (!selectedClass) return null;
 
     return (
         // El fondo oscuro que cierra el modal al hacer clic
@@ -90,16 +86,14 @@ function ClassDetailModal({ selectedClass, onClose }) {
     );
 }
 
-// --- Componente Principal ---
-// Este es tu componente App, ahora con la temática del juego.
+// --- Componente principal
+
 const App = () => {
-    // 1. ESTADO: ¿Está el modal abierto? Es igual que tu `[modal, setModal]`
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // 2. ESTADO: ¿Qué clase hemos seleccionado? Necesitamos guardar esta información.
     const [selectedClass, setSelectedClass] = useState(null);
 
-    // Función para manejar la selección de una clase
     const handleSelectClass = (classData) => {
         setSelectedClass(classData); // Guardamos la clase en el estado
         setIsModalOpen(true);      // Abrimos el modal
@@ -119,14 +113,13 @@ const App = () => {
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
             <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora&display=swap" rel="stylesheet" />
 
-            {/* BARRA DE NAVEGACIÓN: Es como tu barra naranja de "Aldo's recipes" */}
             <header className="py-5 text-center bg-black/30 backdrop-blur-sm">
                 <h1 className="text-4xl font-bold tracking-widest text-amber-300" style={{ fontFamily: 'Cinzel, serif' }}>
                     CREADOR DE HÉROES
                 </h1>
             </header>
 
-            {/* CONTENIDO PRINCIPAL: Es el equivalente a tu <CookieRecipe /> */}
+
             <main className="max-w-4xl mx-auto p-8">
                 <h2 className="text-3xl text-center font-bold mb-8 text-amber-200">Elige tu camino, aventurero</h2>
                 <div className="grid md:grid-cols-3 gap-8">
@@ -140,7 +133,6 @@ const App = () => {
                 </div>
             </main>
 
-            {/* MODAL: Se muestra condicionalmente, igual que en tu código original */}
             {isModalOpen && <ClassDetailModal selectedClass={selectedClass} onClose={handleCloseModal} />}
         </div>
     );

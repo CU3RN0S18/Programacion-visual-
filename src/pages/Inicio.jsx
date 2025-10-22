@@ -79,8 +79,8 @@ function Inicio() {
     );
 }
 
-// Componente Modal (antes en ./Modal.jsx)
-// He creado una versión básica aquí para que el código funcione.
+// inicio de modal
+
 function Modal({ potato }) {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -90,7 +90,7 @@ function Modal({ potato }) {
             {/* Contenido del Modal */}
             <div className="relative bg-white w-11/12 md:max-w-md mx-auto rounded-lg shadow-xl p-8 z-10">
                 <h2 className="text-2xl font-bold text-center mb-4">Iniciar Sesión</h2>
-                <p className="text-center text-gray-600 mb-6">Esta es una ventana modal de ejemplo.</p>
+                <p className="text-center text-gray-600 mb-6">ejemplo.</p>
                 <div className="flex justify-center">
                     <button
                         onClick={potato}
@@ -114,16 +114,14 @@ const App = () => {
             {/* Barra de Navegación */}
             <div className="bg-orange-600 py-4 flex justify-center shadow-lg">
                 <div className="flex justify-between items-center w-full max-w-6xl px-4 text-orange-100">
-                    <div className="text-2xl font-bold">Mis Proyectos</div>
+                    <div className="text-2xl font-bold">componente del modal</div>
                     <button
                         className="text-xl flex items-center justify-center p-2 rounded-md hover:bg-orange-700 transition-colors"
                         onClick={() => setModal(!modal)}
                     >
-                        {/* Nota: Asegúrate de tener Font Awesome 
-                            configurado en tu proyecto para que este icono funcione.
-                        */}
+
                         <i className="fa-solid fa-right-to-bracket mr-2"></i>
-                        Sign In
+                        Iniciar sesion
                     </button>
                 </div>
             </div>
