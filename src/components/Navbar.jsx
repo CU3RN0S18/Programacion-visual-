@@ -27,7 +27,7 @@ function Navbar() {
                 </li>
                 <li>
                     <Link to="/servicios" className="text-gray-300 hover:text-white">
-                        Servicios
+                        Eleccion de clase
                     </Link>
                 </li>
                 <li>
