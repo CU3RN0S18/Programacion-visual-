@@ -73,7 +73,7 @@ function ClassDetailModal({ selectedClass, onClose }) {
                         onClick={onClose} // En un juego real, esto confirmaría la selección
                         className="py-2 px-6 font-bold rounded-lg bg-amber-500 text-stone-900 hover:bg-amber-400 transition-colors"
                     >
-                        Confirmar Clase
+                        Confirmar
                     </button>
                 </div>
 
