@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// ¡IMPORTANTE! Importa tu componente de Resumen original
 import ResumenJuego from './ResumenJuego';
 
 // Estado inicial COMPLETO
@@ -71,7 +70,7 @@ function RegistroPersistente() {
         setHeroeSeleccionado(hero);
     };
 
-    // ¡NUEVA FUNCIÓN! Requisito de la Tarea B
+
     const handleClearList = () => {
         setHeroes([]);
         setHeroeSeleccionado(null);
