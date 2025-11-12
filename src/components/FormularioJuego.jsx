@@ -56,7 +56,7 @@ function FormularioJuego({ onFormSubmit }) {
     const errorStyle = "text-red-400 text-xs mt-1";
 
     return (
-        // 4. Estilo del formulario (fondo oscuro, sombra, etc.)
+        // 4. Estilo del formulario 
         <form onSubmit={handleSubmit} className="space-y-6 p-6 rounded-lg shadow-xl bg-gray-800">
 
             {/* Campo Nombre */}
@@ -71,7 +71,7 @@ function FormularioJuego({ onFormSubmit }) {
                 {errors.nombre && <p className={errorStyle}>{errors.nombre}</p>}
             </div>
 
-            {/* Campo Clase (Actualizado a la imagen) */}
+            {/* Campo Clase  */}
             <div>
                 <label htmlFor="clase" className={labelStyle}>
                     Clase:
@@ -86,7 +86,7 @@ function FormularioJuego({ onFormSubmit }) {
                 </select>
             </div>
 
-            {/* Campo Género (NUEVO - Radio Buttons) */}
+            {/* Campo Género  */}
             <div>
                 <label className={labelStyle}>Género:</label>
                 <div className="mt-2 flex gap-6">
@@ -95,7 +95,7 @@ function FormularioJuego({ onFormSubmit }) {
                             type="radio" name="genero" value="masculino"
                             checked={formData.genero === 'masculino'}
                             onChange={handleChange}
-                            className="text-yellow-500 focus:ring-yellow-600" // Color de acento
+                            className="text-yellow-500 focus:ring-yellow-600" 
                         />
                         <span className="ml-2">Masculino</span>
                     </label>
@@ -112,7 +112,7 @@ function FormularioJuego({ onFormSubmit }) {
                 {errors.genero && <p className={errorStyle}>{errors.genero}</p>}
             </div>
 
-            {/* Campo Color de Cabello (NUEVO - Select) */}
+            {/* Campo Color de Cabello  */}
             <div>
                 <label htmlFor="colorCabello" className={labelStyle}>
                     Color de Cabello:
@@ -130,7 +130,7 @@ function FormularioJuego({ onFormSubmit }) {
                 </select>
             </div>
 
-            {/* Campo Email (del jugador) */}
+            {/* Campo Email  */}
             <div>
                 <label htmlFor="email" className={labelStyle}>
                     Email del Jugador:
@@ -143,7 +143,7 @@ function FormularioJuego({ onFormSubmit }) {
                 {errors.email && <p className={errorStyle}>{errors.email}</p>}
             </div>
 
-            {/* Campo Biografía (NUEVO - Textarea) */}
+            {/* Campo Biografía */}
             <div>
                 <label htmlFor="biografia" className={labelStyle}>
                     Biografía (Opcional):
